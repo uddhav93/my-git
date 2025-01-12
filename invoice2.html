@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<title>Neh Infomatics Invoice Bill</title>
+<head>
+<!-- <link rel='shortcut icon' href='<?php echo $theme_link; ?>images/favicon.ico' /> -->
+
+
+<style>
+@page {
+                margin: 10px 10px 10px 10px;
+            }
+table, th, td {
+    border: 0.5pt solid black;
+    border-collapse: collapse;    
+    table-layout: fixed;
+}
+tbody tr{
+ /* height : 100px; */
+}
+
+th {
+    padding: 5px;
+    text-align: left;   
+    vertical-align:top 
+}
+ td {
+    /* padding: 5px; */
+    text-align: left;   
+    vertical-align:top 
+}
+body{
+  word-wrap: break-word;
+  font-family:  'sans-serif','Arial';
+  font-size: 11px;
+  /*height: 210mm;*/
+}
+
+.style_hidden{
+  border-style: hidden;
+}
+.fixed_table{
+  table-layout:fixed;
+}
+.text-center{
+  text-align: center;
+}
+.text-left{
+  text-align: left;
+}
+.text-right{
+  text-align: right;
+}
+
+.text-bold{
+  font-weight: bold;
+}
+.bg-sky{
+  background-color: #E8F3FD;
+}
+.top-space{
+  margin-top:20px;
+}
+
+.col-small{
+  width: 11%;
+}
+
+.exsmall
+{
+  width: 8%;
+}
+.esmall{
+  width:9%;
+}
+.exxsmall{
+  width:6%;
+}
+@page { size: A4; margin: 5px; }
+body { margin: 5px; }
+
+ #clockwise {
+       rotate: 90;
+    }
+
+    #counterclockwise {
+       rotate: -90;
+    }
+
+</style>
+</head>
+<!--<body onload="window.print();">-->
+    <!-- window.print() -->
+
+
+<caption>
+      <!-- <center> -->
+      <div class="top-space" style="text-align: center;">
+
+        <span style="font-size: 18px;">
+        <b style="text-transform: uppercase;">Tax Invoice</b>
+        <!-- <p style="font-size: 12px;margin-top: -0.001%;">Level 2, Matoshree Building,<br> Opp. Morarji Desai Town Hall, Killa Pardi,<br> Valsad, Gujarat, India. 396125.</p>
+        <p style="font-size: 12px;margin-top: -0.5%;"><span style="font-weight: bolder;">Ph No:</span>8452362141</p>   -->
+        </span>
+  </div>
+      <!-- </center> -->
+</caption>
+<br><br><br>
+<table  style="border: none; width: 100%;" >
+    <!-- <tr>
+        <td colspan="4" align="center" style="border: none;"> <h4  class="hfsize"> TAX INVOICE</h4></td>
+    </tr> -->
+    <tbody >
+        <tr>
+            <td colspan="8" rowspan="3"  style="border: none;font-size: 13px;">
+              <span style="font-weight: bold; ">NEH INFOMATICS</span><br>Level 2, Matoshree Building, Opp. Morarji Desai Town Hall,<br> Killa Pardi, Valsad, Gujarat, India. 396125.
+              <br><span >Phone No:</span> (+91) 8866461717<br><span >Email:</span> info@nehinfomatics.com
+            </td>
+            <td style="border: none;text-align: end;font-size: 13px;font-weight: bold;"colspan="2" >Invoice No:</td>
+            <td style="border: none;text-align: start;font-size: 13px;">DE/333</td>
+        </tr>
+        <tr style="font-size: 13px;">
+            <td  style="border: none;text-align: end;font-weight: bold;" colspan="2">Invoice Date:</td>
+            <td style="border: none;text-align: start;" >04/07/2023</td>
+        </tr>
+        <tr style="font-size: 13px;">
+            <td style="border: none;text-align: end;font-weight: bold;"colspan="2" >Due Date:</td>
+            <td style="border: none;text-align: start;">20/07/2023</td>
+        </tr>
+        <tr style="font-size: 13px;">
+            <td style="border: none;" rowspan="2" colspan="6">
+                <br>Bill To<br><span style="font-weight: bold;">SHREE D.P.PATEL SARVAGANIK HIGH SCHOOL</span><br>Mota Vanghchhipa <br>Ta-pardi <br>Dist-Valsad<br>State:GUJRAT
+            </td>
+        </tr>
+    </tbody>
+   
+</table>
+<table autosize="1" style="border:none;padding-left:25px; overflow: wrap" id='mytable' align="center" width="100%" height='100%'  cellpadding="0" cellspacing="0" >
+<!-- <table align="center" width="100%" height='100%'   > -->
+  
+<thead>
+<!-- First Half -->
+ 
+      <tr>
+        <!-- <td style="border:none;font-size: 14px;font-weight:bold;" colspan="3">Occupency <span style="font-weight: 100;">-</span></td>
+        <td style="border:none;font-size: 14px;font-weight:bold;" colspan="1" >Adults:</td>
+        <td style="border:none;font-size: 14px" >1</td>
+        <td style="border:none;font-size: 14px;font-weight:bold;" colspan="2" >Children:</td>
+        <td style="border:none;font-size: 14px" >0</td>
+        <td style="border:none;font-size: 14px;font-weight:bold;" colspan="2">Related No:</td>
+        <td style="border:none;font-size: 14px" colspan="3">5622</td> -->
+        <!-- <td style="border:none" colspan="2">Departure</td>
+        <td style="border:none" colspan="1">15/10/2023</td>
+        <td style="border:none" colspan="1">12:45:24 PM</td> -->
+    </tr>
+<!-- <tr>
+  <th colspan="3"style=" height: 30px;font-weight:normal;border-right:none;text-align:center;font-size:13px">  Name of Work :</th>
+  <th colspan="14"style=" height: 30px;font-weight:normal;border-left:none;font-size:13px">Quotation Bill</th>
+                                </tr> -->
+                               
+<tr><!-- Colspan 10 -->
+  <th colspan='2' class="text-center"style="font-size:12px;border-bottom:none;">Sr</th>
+  <th colspan='4' class="text-center"style="font-size:12px" >Name of Product/Service</th>
+  <th colspan='2' class="text-center exsmall"style="font-size:12px">HSN/SAC</th>
+
+  <th colspan='2' class="text-center exsmall"style="font-size:12px">UOM</th>
+  <th colspan='2' class="text-center esmall"style="font-size:12px">Qty</th>
+  <!-- <th colspan='' class="text-center col-small">Taxable Value</th> -->
+
+  <!-- <th colspan='1' class="text-center exxsmall">Tax Rate</th> -->
+  <th  colspan='2' class="text-center"style="font-size:12px">Rate</th>
+  <th  colspan='2' class="text-center"style="font-size:12px">Amount</th>
+  <th colspan='2' class="text-center"style="font-size:12px">Discount</th>
+  <!-- <th class="text-center">I.GST</th> -->
+
+  <!-- <th colspan='2' class="text-center"><?= $this->lang->line('rate'); ?></th> -->
+  <!-- <th colspan='2' class="text-center col-small"style="font-size:12px">Amount</th> -->
+</tr>
+</thead>
+
+<tbody>
+  <!-- <tr> -->
+    <!-- <td colspan='16'> -->              
+                <tr> 
+                    <td colspan='2' height=350 class='text-center' style='padding:5px 5px 0px 5px;font-size:14px'>1</td>
+                  
+                 <!-- echo "<td colspan='1'height=35 class='text-center'style='padding:5px 5px 0px 5px;font-size:11px'>".$x."</td>"; -->
+                
+                
+                   <td colspan='4' cellpadding=10 style='padding:5px 5px 0px 5px;font-size:14px'>
+                    Printer Repair<br>Printer Head Epsilon
+                    
+                    </td>
+                  <td colspan='2' class='text-center 'style='padding:5px 5px 0px 5px;font-size:14px'></td>
+                    <td colspan='2' class='text-center 'style='padding:5px 5px 0px 5px;font-size:14px;'>NOS</td>
+                    <td colspan='2' class='text-center 'style='padding:5px 5px 0px 5px;font-size:14px'>1.00</td>
+                  
+  
+                 
+                    <td colspan='2' style='text-align: center;padding:5px 5px 0px 5px;font-size:12px'>6500.00</td>
+                    
+                   <td colspan='2' style='text-align: center;padding:5px 5px 0px 5px;font-size:12px'>6500.00</td>
+                   <td colspan='2' style='text-align: center;padding:5px 5px 0px 5px;font-size:12px'>0.00</td>
+
+                    <!-- <td colspan='2' class='text-center col-small'style='padding:5px 5px 0px 5px;font-size:11px'>1820</td> -->
+                    </tr> 
+             <tr style="font-size: 14px; height:30px;">
+                <td colspan="10"  style="text-align: end;font-weight: bold;vertical-align: middle;">Total:</td>
+                <td colspan="2" style="text-align: center;vertical-align: middle;" >1.00</td>
+                <td colspan="2"></td>
+                <td colspan="2" style="text-align: center;vertical-align: middle;">6500.00</td>
+                <td colspan="2" style="text-align: center;vertical-align: middle;">0.00</td>
+             </tr>
+        <!-- </td> -->
+  <!-- </tr> -->
+  </tbody>
+
+<tfoot>
+
+  <!-- <tr class="bg-sky">
+    <td colspan="8" class='text-center text-bold'><?= $this->lang->line('total'); ?></td>
+    <td colspan="2" class='text-right' ><b><?php echo store_number_format($tot_estimate_price); ?></b></td>
+    <td colspan="1" class='text-bold text-center'><?=number_format($tot_qty,2); ?></td>
+    <td colspan="1" class='text-bold text-center'></td>
+    <td colspan="1" class='text-right' ><b><?php echo store_number_format($tot_tax_amt); ?></b></td>
+    <td colspan="1" class='text-right' ><b><?php echo store_number_format($tot_discount_amt); ?></b></td>
+    <td colspan="2" class='text-right' ><b><?php echo store_number_format($tot_total_cost); ?></b></td>
+  </tr> -->
+      <tr>
+        <td colspan="18">
+          <table width="100%" class="style_hidden" >
+           
+                      
+                          <td colspan="14"  >
+                          <table style="width: 100%;" class="style_hidden">
+                    
+                    <tr >
+                      <td colspan='5' style="border:none" >
+                        <table width="100%" class="style_hidden" >
+                            <tr>
+                              <td style="padding:5px;font-weight:normal;font-size:13px;">
+                            <span style="font-size: 13px;font-weight: bold;">
+                                Amount In Words:
+                            </span>SIX THOUSAND FIVE HUNDRED ONLY<br><br>
+                            <!-- <span style="font-weight: bold; text-decoration:underline;">Terms and Conditions:</span> <br>
+                            <span style="font-size: 13px;">
+                            1 Any Complaint Regarding Goods should be made within 3 days from the Receipt.
+                            </span><br>
+                            2.Cheque return charge Rs 250
+                            </td> -->
+                          </tr>
+                         
+                          <tr>
+                            <td style="padding:5px;font-weight:normal;font-size:13px;">
+                                <span style="font-weight: bold; text-decoration:underline;">Terms and Conditions:</span> <br>
+                                <span style="font-size: 13px;">
+                                1 Any Complaint Regarding Goods should be made within 3 days from the Receipt.
+                                </span><br>
+                                2.Cheque return charge Rs 250
+                              </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <!-- <td colspan='1' class='' >
+                        <table width="100%" class="style_hidden" >
+                          <tr>
+                            <td colspan='3' style='padding:5px;height:13px;font-size:13px;height:17px'>   </td>
+                          </tr>
+                          <tr>
+                          <td colspan='3' style='padding:5px;font-size:13px;height:17px' class=''>UT.GST  </td>
+                          </tr>
+                          <tr>
+                          <td colspan='3'style='padding:5px;font-size:13px;height:17px;' class=''>C.GST&nbsp;</td></tr>
+                          <tr>
+                          <td colspan='3' style='padding:5px;font-size:13px;'class=''>I.GST&nbsp;</td> 
+                          </tr>
+                    </table>
+                      </td> -->
+                      <!-- <td colspan='1' class='text-center'>
+                        <table width="100%" class="style_hidden" >
+                          <tr>
+                            <td colspan='3' style='padding:5px;height:13px;height:17px'></td>
+                          </tr>
+                          <tr>
+                          <td colspan='3' style='padding:5px;font-size:13px;text-align:right;height:17px'>256</td>
+                          </tr>
+                          <tr>
+                          <td colspan='3' style='padding:5px;font-size:13px;text-align:right;height:17px' >255</td></tr>
+                          <tr>
+                          <td colspan='3' style='padding:5px;font-size:13px;text-align:right' >414</td> 
+                          </tr>
+                    </table>
+                      </td> -->
+                      <td colspan='2' class='text-center'>
+                        <table width="100%" class="style_hidden" >
+                          <!-- <tr>
+                            <td colspan='3' style='padding:5px;font-size:13px;height:17px;text-align:right;font-size: 15px;font-weight: 600;'>CGST</td>
+                          </tr> -->
+                          <tr>
+                          <td colspan='3' style='padding:5px;height:17px;text-align:right;font-size: 14px;'><b>Gross Amount</b></td>
+                          </tr>
+                          <tr>
+                          <td colspan='3' style='padding:5px;height:17px;text-align:right;font-size: 14px;'>Discount</td></tr>
+                          <tr>
+                            <td colspan='3' style='padding:5px;height:17px;text-align:right;font-size: 14px;'>Round</td></tr>
+                          <tr>
+                          <td colspan='3' style='padding:5px;text-align:right;font-size: 14px;'><b>Net Amount</b></td> 
+                          </tr>
+                    </table>
+                      </td>   <td colspan='1' class='text-center' >
+                        <table width="100%" class="style_hidden" >
+                          <!-- <tr>
+                            <td colspan='2' style='padding:5px;font-size:13px;text-align:right;height:17px'>454</td>
+                          </tr> -->
+                          <tr>
+                          <td colspan='2' style='padding:5px;font-size:13px;text-align:right;height:17px'><b>6500.00</b></td>
+                          </tr>
+                          <tr>
+                          <td colspan='2' style='padding:5px;height:16px;font-size:13px;text-align:right;height:17px'>0.00</td></tr>
+                          <tr>
+                            <td colspan='2' style='padding:5px;height:16px;font-size:13px;text-align:right;height:17px'>0.00</td></tr>
+                          <tr>
+                          <td colspan='2' style='padding:7px;font-size:13px;text-align:right'><b>6500</b></td> 
+                          </tr>
+                        </table>
+                      </td>
+                      
+                      <!-- <td colspan='1' class='text-center'>UT.GST  &nbsp;:<br><?= (!empty($sgst_per)) ? store_number_format($tot_sgst_amt) : '' ?></td>
+                      <td colspan='1' class='text-center'>C.GST&nbsp;:<br><?= (!empty($cgst_per)) ? store_number_format($tot_cgst_amt) : '' ?></td>
+                      <td colspan='1' class='text-center'>I.GST&nbsp;:<br><?= (!empty($igst_per)) ? store_number_format($tot_igst_amt) : '' ?></td> -->
+                      <!-- <td colspan='2' class='text-center' style="vertical-align:bottom;text-align:center;"><b>Total (<span style="font-family: DejaVu Sans; sans-serif; ">&#8377;</span>)&nbsp;: &nbsp;<?=store_number_format($price_after_tax)?></b></td> -->
+
+                    </tr>
+                    <!-- <tr>
+
+                   
+                    </tr> -->
+                    </table>
+                    </td>
+                      <tr style="height: 100px;">
+                        <td colspan="10">
+                         <table style="width: 100%;" class="style_hidden fixed_table">
+                            <tr>
+                                <td style="font-size: 15px;  border: none;"><br>
+                                  <span style="font-weight: bold;margin-left: 60%;text-decoration:underline;">Bank Details:</span>
+                                  <tr style="border: none; font-size: 14px;">
+                                    <td style="border: none;"><span style="font-weight: bold;">Bank:</span> HDFC Bank</td>
+                                    <td style="border: none;"><span style="font-weight: bold;">A/C No:</span>20514520000255</td>
+                                  </tr>
+                                  <tr style="border: none; font-size: 14px;">
+                                    <td style="border: none;"><span style="font-weight: bold;"><br>RTGS:</span> HDFC002051</td>
+                                    <td style="border: none;"><span style="font-weight: bold;"><br>Branch:</span>PARDI</td>
+                                  </tr>
+                                </td>  
+                            </tr>
+                         </table>
+                        </td>
+                        <td colspan="4" style="border: none; font-size: 16px; font-weight: bold; text-align: right;padding-right: 2%;"><br><br>For Neh Infomatics</td>
+                      </tr>
+                        <tr>
+                            <td colspan="10" style=" font-size: 16px; font-weight: bold; text-align:left;padding-left: 2%;"><br><br><br>Receiver Signature</td>
+                    <td colspan='4' style="border:none">
+                          <table style="width: 100%;" class="style_hidden fixed_table">
+                        <tr>
+                          <td style="height:40px;font-size:13px" class="border:none text-right style_hidden fixed_table">
+                                    <br><br><br><span style="font-size:15px; padding-right: 2%;font-weight: bold;"> Authorised Signature</span><br><br>
+                                    <!--img width="30%" src="uploads/stamp/stamp.png"><br-->
+                                  </td>
+                        </tr>
+                    <!-- <tr>
+                      <td style="border:none" class="text-right"><span style="font-size:13px"></span>
+                    </td>
+                    </tr> -->
+                    </tr>
+           
+                        </table>
+                            </td>
+                            </tr>
+                    </table>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="5" style="border:none;font-size: 16px; text-align: left;"><a href="https://nehinfomatics.com/"  style=" color: black;text-decoration: none;">Designed By Neh Infomatics</a></td>
+                <td colspan="10"  style="border: none; font-size: 16px; font-weight: bold; text-align: center;">SUBJECT TO PARDI JURISDICTION</td>
+              </tr>
+              <!-- <tr>
+                <td colspan="18" style="border: none; font-size: 16px;text-align: center;">Designed By Neh Infomatics</td>
+              </tr> -->
+          </table>
+       </td>
+      </tr>
+
+      <!-- T&C & Bank Details & signatories-->
+    
+      <!-- T&C & Bank Details & signatories End -->
+
+      
+    
+      
+</tfoot>
+
+</table>
+<!-- <caption>
+      <center>
+        <span style="font-size: 11px;text-transform: uppercase;">
+          This is Computer Generated Invoice
+        </span>
+      </center>
+</caption> -->
+</body>
+</html>
